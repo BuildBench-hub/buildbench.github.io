@@ -16,13 +16,13 @@
         }
 
         /* Style for the leaderboard table */
-        #accuracy-leaderboard, #speed-leaderboard {
+        #accuracy-leaderboard, #speed-leaderboard, .additional-table {
             width: 100%;
             border-collapse: collapse;
         }
 
         /* Table header style */
-        #accuracy-leaderboard th, #speed-leaderboard th {
+        #accuracy-leaderboard th, #speed-leaderboard th, .additional-table th {
             background-color: #388e3c; /* Green header */
             color: white;
             padding: 12px 20px;
@@ -30,7 +30,7 @@
         }
 
         /* Table row and cell styles */
-        #accuracy-leaderboard td, #speed-leaderboard td {
+        #accuracy-leaderboard td, #speed-leaderboard td, .additional-table td {
             padding: 12px 20px;
             text-align: left;
             border-top: 1px solid #ddd;
@@ -38,11 +38,11 @@
         }
 
         /* Zebra striping for table rows */
-        #accuracy-leaderboard tr:nth-child(odd), #speed-leaderboard tr:nth-child(odd) {
+        #accuracy-leaderboard tr:nth-child(odd), #speed-leaderboard tr:nth-child(odd), .additional-table tr:nth-child(odd) {
             background-color: #f9f9f9;  /* Light gray background for odd rows */
         }
 
-        #accuracy-leaderboard tr:hover, #speed-leaderboard tr:hover {
+        #accuracy-leaderboard tr:hover, #speed-leaderboard tr:hover, .additional-table tr:hover {
             background-color: #f1f1f1;  /* Light hover effect */
         }
 
@@ -137,6 +137,47 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Additional Table for X86 to ARM -->
+            <div class="table-title">X86 to ARM Architecture</div>
+            <table class="additional-table">
+                <thead>
+                    <tr>
+                        <th>Models</th>
+                        <th>Success Packages</th>
+                        <th>Mean time to repair</th>
+                        <th>Token consumption</th>
+                        <th>Iteration=1</th>
+                        <th>Iteration=2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Model A</td>
+                        <td>100</td>
+                        <td>10ms</td>
+                        <td>500</td>
+                        <td>98%</td>
+                        <td>99%</td>
+                    </tr>
+                    <tr>
+                        <td>Model B</td>
+                        <td>98</td>
+                        <td>12ms</td>
+                        <td>450</td>
+                        <td>97%</td>
+                        <td>98%</td>
+                    </tr>
+                    <tr>
+                        <td>Model C</td>
+                        <td>95</td>
+                        <td>14ms</td>
+                        <td>430</td>
+                        <td>96%</td>
+                        <td>97%</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <!-- Speed Leaderboard (Patch Generate Architecture) -->
@@ -186,6 +227,47 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Additional Table for ARM to X86 -->
+            <div class="table-title">ARM to X86 Architecture</div>
+            <table class="additional-table">
+                <thead>
+                    <tr>
+                        <th>Models</th>
+                        <th>Success Packages</th>
+                        <th>Mean time to repair</th>
+                        <th>Token consumption</th>
+                        <th>Iteration=1</th>
+                        <th>Iteration=2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Model F</td>
+                        <td>105</td>
+                        <td>9ms</td>
+                        <td>480</td>
+                        <td>97%</td>
+                        <td>98%</td>
+                    </tr>
+                    <tr>
+                        <td>Model G</td>
+                        <td>103</td>
+                        <td>11ms</td>
+                        <td>460</td>
+                        <td>96%</td>
+                        <td>97%</td>
+                    </tr>
+                    <tr>
+                        <td>Model H</td>
+                        <td>99</td>
+                        <td>13ms</td>
+                        <td>440</td>
+                        <td>95%</td>
+                        <td>96%</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </main>
