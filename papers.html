@@ -5,7 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papers & Repos</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #c8e6c9;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 60px auto 100px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #388e3c;
+            border-left: 5px solid #388e3c;
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        ul li:hover {
+            background-color: #e8f5e9;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        ul li a {
+            color: #2e7d32;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #1b5e20;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #388e3c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                margin: 30px 15px 80px 15px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            ul li {
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -19,21 +136,22 @@
 
     <main>
         <h1>Papers & Open Source Repositories</h1>
+
         <h2>Research Papers</h2>
         <ul>
-            <li><a href="https://example.com/paper1">Paper 1 - Title</a></li>
-            <li><a href="https://example.com/paper2">Paper 2 - Title</a></li>
-            <li><a href="https://example.com/paper3">Paper 3 - Title</a></li>
+            <li><a href="https://example.com/paper1" target="_blank">Paper 1 — Large-Scale Log Analysis with AIOps</a></li>
+            <li><a href="https://example.com/paper2" target="_blank">Paper 2 — Efficient Root Cause Detection via Transfer Learning</a></li>
+            <li><a href="https://example.com/paper3" target="_blank">Paper 3 — Intelligent Package Repair using LLMs</a></li>
         </ul>
 
         <h2>Open Source Repositories</h2>
         <ul>
-            <li><a href="https://github.com/your-repo1">Repository 1</a></li>
-            <li><a href="https://github.com/your-repo2">Repository 2</a></li>
+            <li><a href="https://github.com/your-repo1" target="_blank">Repository 1 — AIOps Benchmark Toolkit</a></li>
+            <li><a href="https://github.com/your-repo2" target="_blank">Repository 2 — Log Analysis with LLMs</a></li>
         </ul>
     </main>
 
-    <footer style="position: fixed; bottom: 0; width: 100%; background-color: #388e3c; color: white; text-align: center; padding: 10px;">
+    <footer>
         <p>&copy; 2023 Model Performance Benchmark. All rights reserved.</p>
     </footer>
 </body>
