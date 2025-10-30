@@ -90,9 +90,9 @@
             <button class="btn-switch" onclick="showLeaderboard('patch-generate')">ARM to X86</button>
         </div>
 
-        <!-- Accuracy Leaderboard (Full Generate Architecture) -->
+        <!-- X86 to ARM: Accuracy Leaderboard -->
         <div id="full-generate" class="leaderboard-section">
-            <div class="table-title">Overall Performance</div>
+            <div class="table-title">Overall Performance (X86 to ARM)</div>
             <div id="accuracy-leaderboard-container">
                 <table id="accuracy-leaderboard">
                     <thead>
@@ -133,11 +133,46 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Additional Table for X86 to ARM -->
+            <div class="table-title">Additional Results (X86 to ARM)</div>
+            <div class="additional-table-container">
+                <table class="additional-table">
+                    <thead>
+                        <tr>
+                            <th>Models</th>
+                            <th>Success Packages</th>
+                            <th>Mean time to repair</th>
+                            <th>Token consumption</th>
+                            <th>Iteration=1</th>
+                            <th>Iteration=2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Model G</td>
+                            <td>110</td>
+                            <td>8ms</td>
+                            <td>470</td>
+                            <td>96%</td>
+                            <td>97%</td>
+                        </tr>
+                        <tr>
+                            <td>Model H</td>
+                            <td>108</td>
+                            <td>10ms</td>
+                            <td>450</td>
+                            <td>95%</td>
+                            <td>96%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <!-- Speed Leaderboard (Patch Generate Architecture) -->
+        <!-- ARM to X86: Speed Leaderboard -->
         <div id="patch-generate" class="leaderboard-section" style="display: none;">
-            <div class="table-title">Patch Generate Architecture</div>
+            <div class="table-title">Patch Generate Architecture (ARM to X86)</div>
             <div id="speed-leaderboard-container">
                 <table id="speed-leaderboard">
                     <thead>
@@ -178,76 +213,41 @@
                     </tbody>
                 </table>
             </div>
-        </div>
 
-        <!-- Additional Table for X86 to ARM -->
-        <div id="full-generate" class="additional-table-container" style="display: none;">
-            <div class="table-title">Additional X86 to ARM Results</div>
-            <table class="additional-table">
-                <thead>
-                    <tr>
-                        <th>Models</th>
-                        <th>Success Packages</th>
-                        <th>Mean time to repair</th>
-                        <th>Token consumption</th>
-                        <th>Iteration=1</th>
-                        <th>Iteration=2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Model G</td>
-                        <td>110</td>
-                        <td>8ms</td>
-                        <td>470</td>
-                        <td>96%</td>
-                        <td>97%</td>
-                    </tr>
-                    <tr>
-                        <td>Model H</td>
-                        <td>108</td>
-                        <td>10ms</td>
-                        <td>450</td>
-                        <td>95%</td>
-                        <td>96%</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Additional Table for ARM to X86 -->
-        <div id="patch-generate" class="additional-table-container" style="display: none;">
-            <div class="table-title">Additional ARM to X86 Results</div>
-            <table class="additional-table">
-                <thead>
-                    <tr>
-                        <th>Models</th>
-                        <th>Success Packages</th>
-                        <th>Mean time to repair</th>
-                        <th>Token consumption</th>
-                        <th>Iteration=1</th>
-                        <th>Iteration=2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Model I</td>
-                        <td>115</td>
-                        <td>7ms</td>
-                        <td>490</td>
-                        <td>99%</td>
-                        <td>99%</td>
-                    </tr>
-                    <tr>
-                        <td>Model J</td>
-                        <td>112</td>
-                        <td>9ms</td>
-                        <td>470</td>
-                        <td>98%</td>
-                        <td>98%</td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Additional Table for ARM to X86 -->
+            <div class="table-title">Additional Results (ARM to X86)</div>
+            <div class="additional-table-container">
+                <table class="additional-table">
+                    <thead>
+                        <tr>
+                            <th>Models</th>
+                            <th>Success Packages</th>
+                            <th>Mean time to repair</th>
+                            <th>Token consumption</th>
+                            <th>Iteration=1</th>
+                            <th>Iteration=2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Model I</td>
+                            <td>115</td>
+                            <td>7ms</td>
+                            <td>490</td>
+                            <td>99%</td>
+                            <td>99%</td>
+                        </tr>
+                        <tr>
+                            <td>Model J</td>
+                            <td>112</td>
+                            <td>9ms</td>
+                            <td>470</td>
+                            <td>98%</td>
+                            <td>98%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </main>
@@ -269,6 +269,11 @@
 
             // Show the selected leaderboard
             document.getElementById(leaderboardId).style.display = 'block';
+            if (leaderboardId === 'patch-generate') {
+                document.querySelectorAll('.additional-table-container')[1].style.display = 'block';
+            } else {
+                document.querySelectorAll('.additional-table-container')[0].style.display = 'block';
+            }
         }
 
         // Initially show the first leaderboard (Full Generate Architecture)
