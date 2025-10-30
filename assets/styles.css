@@ -15,9 +15,9 @@ body {
 }
 
 header {
-    background-color: #2e7d32; /* 深绿色背景 */
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #388e3c; /* Green header */
+    padding: 10px 20px;
+        
 }
 
 nav ul {
