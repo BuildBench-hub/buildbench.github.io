@@ -53,6 +53,21 @@
             margin-bottom: 10px;
             color: #388e3c;
         }
+
+        /* Button Styling */
+        .btn-switch {
+            background-color: #388e3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn-switch:hover {
+            background-color: #2e7d32;
+        }
     </style>
 </head>
 <body>
@@ -70,98 +85,108 @@
     <main>
         <h1>Model Leaderboards</h1>
 
-        <!-- Accuracy Leaderboard -->
-        <div class="table-title">Full Generate</div>
-        <div id="accuracy-leaderboard-container">
-            <table id="accuracy-leaderboard">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Model</th>
-                        <th>Accuracy</th>
-                        <th>Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Model A</td>
-                        <td>98.6%</td>
-                        <td>10ms</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Model B</td>
-                        <td>97.2%</td>
-                        <td>12ms</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Model C</td>
-                        <td>96.5%</td>
-                        <td>14ms</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Model D</td>
-                        <td>95.8%</td>
-                        <td>15ms</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Model E</td>
-                        <td>95.2%</td>
-                        <td>17ms</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Architecture Switch Buttons -->
+        <div class="button-container">
+            <button class="btn-switch" onclick="showLeaderboard('full-generate')">Full Generate Architecture</button>
+            <button class="btn-switch" onclick="showLeaderboard('patch-generate')">Patch Generate Architecture</button>
         </div>
 
-        <!-- Speed Leaderboard -->
-        <div class="table-title">Patch Generate</div>
-        <div id="speed-leaderboard-container">
-            <table id="speed-leaderboard">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Model</th>
-                        <th>Speed (ms)</th>
-                        <th>Accuracy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Model F</td>
-                        <td>10ms</td>
-                        <td>94.9%</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Model G</td>
-                        <td>12ms</td>
-                        <td>94.3%</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Model H</td>
-                        <td>14ms</td>
-                        <td>93.7%</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Model A</td>
-                        <td>15ms</td>
-                        <td>98.6%</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Model B</td>
-                        <td>17ms</td>
-                        <td>97.2%</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Accuracy Leaderboard (Full Generate Architecture) -->
+        <div id="full-generate" class="leaderboard-section">
+            <div class="table-title">Full Generate Architecture</div>
+            <div id="accuracy-leaderboard-container">
+                <table id="accuracy-leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Model A</td>
+                            <td>98.6%</td>
+                            <td>10ms</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Model B</td>
+                            <td>97.2%</td>
+                            <td>12ms</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Model C</td>
+                            <td>96.5%</td>
+                            <td>14ms</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Model D</td>
+                            <td>95.8%</td>
+                            <td>15ms</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Model E</td>
+                            <td>95.2%</td>
+                            <td>17ms</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Speed Leaderboard (Patch Generate Architecture) -->
+        <div id="patch-generate" class="leaderboard-section" style="display: none;">
+            <div class="table-title">Patch Generate Architecture</div>
+            <div id="speed-leaderboard-container">
+                <table id="speed-leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th>Speed (ms)</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Model F</td>
+                            <td>10ms</td>
+                            <td>94.9%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Model G</td>
+                            <td>12ms</td>
+                            <td>94.3%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Model H</td>
+                            <td>14ms</td>
+                            <td>93.7%</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Model A</td>
+                            <td>15ms</td>
+                            <td>98.6%</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Model B</td>
+                            <td>17ms</td>
+                            <td>97.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </main>
@@ -170,6 +195,20 @@
         <p>&copy; 2023 Model Performance Benchmark. All rights reserved.</p>
     </footer>
 
-    <script src="assets/scripts.js"></script>
+    <script>
+        // Function to switch between leaderboards based on architecture
+        function showLeaderboard(leaderboardId) {
+            // Hide all sections
+            document.querySelectorAll('.leaderboard-section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected leaderboard
+            document.getElementById(leaderboardId).style.display = 'block';
+        }
+
+        // Initially show the first leaderboard (Full Generate Architecture)
+        showLeaderboard('full-generate');
+    </script>
 </body>
 </html>
