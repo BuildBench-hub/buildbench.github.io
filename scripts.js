@@ -1,18 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const table = document.getElementById("leaderboard");
-    const rows = Array.from(table.rows).slice(1); // Skip the header row
+document.addEventListener("DOMContentLoaded", function() {
+    const leaderboardData = [
+        { rank: 1, model: "Model A", accuracy: "98.5%", time: "2023-10-28" },
+        { rank: 2, model: "Model B", accuracy: "95.2%", time: "2023-10-27" },
+        { rank: 3, model: "Model C", accuracy: "93.1%", time: "2023-10-26" }
+    ];
 
-    // Sort by score (second column)
-    function sortByScore() {
-        const sortedRows = rows.sort((rowA, rowB) => {
-            const scoreA = parseFloat(rowA.cells[2].textContent);
-            const scoreB = parseFloat(rowB.cells[2].textContent);
-            return scoreB - scoreA; // Descending order
-        });
-
-        sortedRows.forEach(row => table.appendChild(row)); // Reorder rows in the table
-    }
-
-    // Sort when the page loads
-    sortByScore();
+    const leaderboardTable = document.getElementById("leaderboard").getElementsByTagName("tbody")[0];
+    
+    leaderboardData.forEach(data => {
+        const row = leaderboardTable.insertRow();
+        row.insertCell(0).textContent = data.rank;
+        row.insertCell(1).textContent = data.model;
+        row.insertCell(2).textContent = data.accuracy;
+        row.insertCell(3).textContent = data.time;
+    });
 });
