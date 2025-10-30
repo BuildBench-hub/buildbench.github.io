@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         /* Style for the leaderboard table container */
-        #accuracy-leaderboard-container {
+        #accuracy-leaderboard-container, #speed-leaderboard-container {
             max-height: 400px;  /* You can adjust the height as needed */
             overflow-y: auto;  /* Enables vertical scrolling */
             margin-top: 20px;
@@ -16,13 +16,13 @@
         }
 
         /* Style for the leaderboard table */
-        #accuracy-leaderboard {
+        #accuracy-leaderboard, #speed-leaderboard {
             width: 100%;
             border-collapse: collapse;
         }
 
         /* Table header style */
-        #accuracy-leaderboard th {
+        #accuracy-leaderboard th, #speed-leaderboard th {
             background-color: #388e3c; /* Green header */
             color: white;
             padding: 12px 20px;
@@ -30,7 +30,7 @@
         }
 
         /* Table row and cell styles */
-        #accuracy-leaderboard td {
+        #accuracy-leaderboard td, #speed-leaderboard td {
             padding: 12px 20px;
             text-align: left;
             border-top: 1px solid #ddd;
@@ -38,12 +38,20 @@
         }
 
         /* Zebra striping for table rows */
-        #accuracy-leaderboard tr:nth-child(odd) {
+        #accuracy-leaderboard tr:nth-child(odd), #speed-leaderboard tr:nth-child(odd) {
             background-color: #f9f9f9;  /* Light gray background for odd rows */
         }
 
-        #accuracy-leaderboard tr:hover {
+        #accuracy-leaderboard tr:hover, #speed-leaderboard tr:hover {
             background-color: #f1f1f1;  /* Light hover effect */
+        }
+
+        /* Title style for the tables */
+        .table-title {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #388e3c;
         }
     </style>
 </head>
@@ -60,8 +68,10 @@
     </header>
 
     <main>
-        <h1>Accuracy Leaderboard</h1>
-        <!-- Container for the leaderboard table with scroll -->
+        <h1>Model Leaderboards</h1>
+
+        <!-- Accuracy Leaderboard -->
+        <div class="table-title">Accuracy Leaderboard</div>
         <div id="accuracy-leaderboard-container">
             <table id="accuracy-leaderboard">
                 <thead>
@@ -103,28 +113,57 @@
                         <td>95.2%</td>
                         <td>17ms</td>
                     </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Model F</td>
-                        <td>94.9%</td>
-                        <td>19ms</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Model G</td>
-                        <td>94.3%</td>
-                        <td>20ms</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Model H</td>
-                        <td>93.7%</td>
-                        <td>22ms</td>
-                    </tr>
-                    <!-- More rows can be added here -->
                 </tbody>
             </table>
         </div>
+
+        <!-- Speed Leaderboard -->
+        <div class="table-title">Speed Leaderboard</div>
+        <div id="speed-leaderboard-container">
+            <table id="speed-leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model</th>
+                        <th>Speed (ms)</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Model F</td>
+                        <td>10ms</td>
+                        <td>94.9%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Model G</td>
+                        <td>12ms</td>
+                        <td>94.3%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Model H</td>
+                        <td>14ms</td>
+                        <td>93.7%</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Model A</td>
+                        <td>15ms</td>
+                        <td>98.6%</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Model B</td>
+                        <td>17ms</td>
+                        <td>97.2%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </main>
 
     <footer>
