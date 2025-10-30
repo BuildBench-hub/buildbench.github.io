@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Beautiful gradient background */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
     color: #333;
     text-align: center;
     padding: 0;
@@ -35,11 +35,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #feb47b; /* Hover effect */
+    background-color: #feb47b; /* Light color on hover */
+    color: #333; /* Text color changes to dark on hover */
     border-radius: 5px;
 }
 
@@ -91,10 +92,11 @@ table {
 th, td {
     padding: 12px 20px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green for header */
     color: white;
 }
 
@@ -103,7 +105,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e6f7e6; /* Light green on hover */
 }
 
 .cta {
@@ -126,7 +128,7 @@ tbody tr:hover {
 }
 
 .cta-button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green for CTA button */
     color: white;
     padding: 10px 30px;
     text-decoration: none;
@@ -136,7 +138,7 @@ tbody tr:hover {
 }
 
 .cta-button:hover {
-    background-color: #feb47b;
+    background-color: #feb47b; /* Light color on hover */
 }
 
 footer {
