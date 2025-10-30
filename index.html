@@ -20,22 +20,34 @@
     </header>
 
     <main>
-        <h1>Welcome to the Model Performance Leaderboard</h1>
+        <section class="intro">
+            <h1>Welcome to the Model Performance Leaderboard</h1>
+            <p>Your ultimate benchmark platform for evaluating AI models.</p>
+        </section>
+
         <section id="leaderboard-section">
             <h2>Top Models</h2>
-            <table id="leaderboard">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Model</th>
-                        <th>Accuracy</th>
-                        <th>Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Dynamic content will be loaded here from JSON -->
-                </tbody>
-            </table>
+            <div class="leaderboard-container">
+                <table id="leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be loaded here from JSON -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3>Explore More</h3>
+            <p>Want to learn more about our work or contribute? Check out our papers and open source repositories!</p>
+            <a href="papers.html" class="cta-button">Papers & Repos</a>
         </section>
     </main>
 
