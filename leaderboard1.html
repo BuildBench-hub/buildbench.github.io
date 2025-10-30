@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/styles.css">
     <style>
         /* Style for the leaderboard table container */
-        #accuracy-leaderboard-container, #speed-leaderboard-container {
+        #accuracy-leaderboard-container, #speed-leaderboard-container, .additional-table-container {
             max-height: 400px;  /* You can adjust the height as needed */
             overflow-y: auto;  /* Enables vertical scrolling */
             margin-top: 20px;
@@ -97,87 +97,42 @@
                 <table id="accuracy-leaderboard">
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Model</th>
-                            <th>Accuracy</th>
-                            <th>Time</th>
+                            <th>Models</th>
+                            <th>Success Packages</th>
+                            <th>Mean time to repair</th>
+                            <th>Token consumption</th>
+                            <th>Iteration=1</th>
+                            <th>Iteration=2</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
                             <td>Model A</td>
-                            <td>98.6%</td>
+                            <td>100</td>
                             <td>10ms</td>
+                            <td>500</td>
+                            <td>98%</td>
+                            <td>99%</td>
                         </tr>
                         <tr>
-                            <td>2</td>
                             <td>Model B</td>
-                            <td>97.2%</td>
+                            <td>98</td>
                             <td>12ms</td>
+                            <td>450</td>
+                            <td>97%</td>
+                            <td>98%</td>
                         </tr>
                         <tr>
-                            <td>3</td>
                             <td>Model C</td>
-                            <td>96.5%</td>
+                            <td>95</td>
                             <td>14ms</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Model D</td>
-                            <td>95.8%</td>
-                            <td>15ms</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Model E</td>
-                            <td>95.2%</td>
-                            <td>17ms</td>
+                            <td>430</td>
+                            <td>96%</td>
+                            <td>97%</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <!-- Additional Table for X86 to ARM -->
-            <div class="table-title">X86 to ARM Architecture</div>
-            <table class="additional-table">
-                <thead>
-                    <tr>
-                        <th>Models</th>
-                        <th>Success Packages</th>
-                        <th>Mean time to repair</th>
-                        <th>Token consumption</th>
-                        <th>Iteration=1</th>
-                        <th>Iteration=2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Model A</td>
-                        <td>100</td>
-                        <td>10ms</td>
-                        <td>500</td>
-                        <td>98%</td>
-                        <td>99%</td>
-                    </tr>
-                    <tr>
-                        <td>Model B</td>
-                        <td>98</td>
-                        <td>12ms</td>
-                        <td>450</td>
-                        <td>97%</td>
-                        <td>98%</td>
-                    </tr>
-                    <tr>
-                        <td>Model C</td>
-                        <td>95</td>
-                        <td>14ms</td>
-                        <td>430</td>
-                        <td>96%</td>
-                        <td>97%</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <!-- Speed Leaderboard (Patch Generate Architecture) -->
@@ -187,49 +142,47 @@
                 <table id="speed-leaderboard">
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Model</th>
-                            <th>Speed (ms)</th>
-                            <th>Accuracy</th>
+                            <th>Models</th>
+                            <th>Success Packages</th>
+                            <th>Mean time to repair</th>
+                            <th>Token consumption</th>
+                            <th>Iteration=1</th>
+                            <th>Iteration=2</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <td>Model D</td>
+                            <td>105</td>
+                            <td>9ms</td>
+                            <td>480</td>
+                            <td>97%</td>
+                            <td>98%</td>
+                        </tr>
+                        <tr>
+                            <td>Model E</td>
+                            <td>103</td>
+                            <td>11ms</td>
+                            <td>460</td>
+                            <td>96%</td>
+                            <td>97%</td>
+                        </tr>
+                        <tr>
                             <td>Model F</td>
-                            <td>10ms</td>
-                            <td>94.9%</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Model G</td>
-                            <td>12ms</td>
-                            <td>94.3%</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Model H</td>
-                            <td>14ms</td>
-                            <td>93.7%</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Model A</td>
-                            <td>15ms</td>
-                            <td>98.6%</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Model B</td>
-                            <td>17ms</td>
-                            <td>97.2%</td>
+                            <td>99</td>
+                            <td>13ms</td>
+                            <td>440</td>
+                            <td>95%</td>
+                            <td>96%</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </div>
 
-            <!-- Additional Table for ARM to X86 -->
-            <div class="table-title">ARM to X86 Architecture</div>
+        <!-- Additional Table for X86 to ARM -->
+        <div id="full-generate" class="additional-table-container" style="display: none;">
+            <div class="table-title">Additional X86 to ARM Results</div>
             <table class="additional-table">
                 <thead>
                     <tr>
@@ -243,28 +196,55 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Model F</td>
-                        <td>105</td>
-                        <td>9ms</td>
-                        <td>480</td>
-                        <td>97%</td>
-                        <td>98%</td>
-                    </tr>
-                    <tr>
                         <td>Model G</td>
-                        <td>103</td>
-                        <td>11ms</td>
-                        <td>460</td>
+                        <td>110</td>
+                        <td>8ms</td>
+                        <td>470</td>
                         <td>96%</td>
                         <td>97%</td>
                     </tr>
                     <tr>
                         <td>Model H</td>
-                        <td>99</td>
-                        <td>13ms</td>
-                        <td>440</td>
+                        <td>108</td>
+                        <td>10ms</td>
+                        <td>450</td>
                         <td>95%</td>
                         <td>96%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Additional Table for ARM to X86 -->
+        <div id="patch-generate" class="additional-table-container" style="display: none;">
+            <div class="table-title">Additional ARM to X86 Results</div>
+            <table class="additional-table">
+                <thead>
+                    <tr>
+                        <th>Models</th>
+                        <th>Success Packages</th>
+                        <th>Mean time to repair</th>
+                        <th>Token consumption</th>
+                        <th>Iteration=1</th>
+                        <th>Iteration=2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Model I</td>
+                        <td>115</td>
+                        <td>7ms</td>
+                        <td>490</td>
+                        <td>99%</td>
+                        <td>99%</td>
+                    </tr>
+                    <tr>
+                        <td>Model J</td>
+                        <td>112</td>
+                        <td>9ms</td>
+                        <td>470</td>
+                        <td>98%</td>
+                        <td>98%</td>
                     </tr>
                 </tbody>
             </table>
