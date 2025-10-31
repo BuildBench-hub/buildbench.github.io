@@ -6,77 +6,87 @@
     <title>Accuracy Leaderboard</title>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
-        /* Style for the leaderboard table container */
-/* Style for the leaderboard table container */
-#accuracy-leaderboard-container, #speed-leaderboard-container, .additional-table-container {
-    max-height: 400px;  /* You can adjust the height as needed */
-    overflow-y: auto;  /* Enables vertical scrolling */
-    margin-top: 20px;
-    max-width: 1600px;
-    border: 1px solid #ddd;  /* Border for the container */
-    border-radius: 8px;
-}
+        /* Add this to center the leaderboard section */
+        .leaderboard-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
 
-/* Style for the leaderboard table */
-#accuracy-leaderboard, #speed-leaderboard, .additional-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+        /* For the tables */
+        #accuracy-leaderboard-container, #speed-leaderboard-container, .additional-table-container {
+            max-height: 400px; /* Adjust the height as needed */
+            overflow-y: auto; /* Enables vertical scrolling */
+            margin-top: 20px;
+            width: 90%; /* Makes the container responsive */
+            max-width: 1200px; /* Set a max width for larger screens */
+            border: 1px solid #ddd; /* Border for the container */
+            border-radius: 8px;
+            margin-left: auto;
+            margin-right: auto; /* Horizontally centers the table */
+        }
 
-/* Table header style */
-#accuracy-leaderboard th, #speed-leaderboard th, .additional-table th {
-    background-color: #1976d2; /* Blue header */
-    color: white;
-    padding: 12px 20px;
-    text-align: left;
-}
+        /* For the tables themselves */
+        #accuracy-leaderboard, #speed-leaderboard, .additional-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-/* Table row and cell styles */
-#accuracy-leaderboard td, #speed-leaderboard td, .additional-table td {
-    padding: 12px 20px;
-    text-align: left;
-    border-top: 1px solid #ddd;
-    background-color: white;  /* Set table rows' background to white */
-}
+        /* Table header style */
+        #accuracy-leaderboard th, #speed-leaderboard th, .additional-table th {
+            background-color: #1976d2; /* Blue header */
+            color: white;
+            padding: 12px 20px;
+            text-align: left;
+        }
 
-/* Zebra striping for table rows */
-#accuracy-leaderboard tr:nth-child(odd), #speed-leaderboard tr:nth-child(odd), .additional-table tr:nth-child(odd) {
-    background-color: #f9f9f9;  /* Light gray background for odd rows */
-}
+        /* Table row and cell styles */
+        #accuracy-leaderboard td, #speed-leaderboard td, .additional-table td {
+            padding: 12px 20px;
+            text-align: left;
+            border-top: 1px solid #ddd;
+            background-color: white;  /* Set table rows' background to white */
+        }
 
-#accuracy-leaderboard tr:hover, #speed-leaderboard tr:hover, .additional-table tr:hover {
-    background-color: #f1f1f1;  /* Light hover effect */
-}
+        /* Zebra striping for table rows */
+        #accuracy-leaderboard tr:nth-child(odd), #speed-leaderboard tr:nth-child(odd), .additional-table tr:nth-child(odd) {
+            background-color: #f9f9f9;  /* Light gray background for odd rows */
+        }
 
-/* Title style for the tables */
-.table-title {
-    font-size: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #1976d2; /* Blue title */
-}
+        #accuracy-leaderboard tr:hover, #speed-leaderboard tr:hover, .additional-table tr:hover {
+            background-color: #f1f1f1;  /* Light hover effect */
+        }
 
-/* Button Styling */
-.btn-switch {
-    background-color: #1976d2; /* Blue button */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
+        /* Title style for the tables */
+        .table-title {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #1976d2; /* Blue title */
+        }
 
-.btn-switch:hover {
-    background-color: #42a5f5; /* Light blue on hover */
-}
+        /* Button Styling */
+        .btn-switch {
+            background-color: #1976d2; /* Blue button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-/* Header styling */
-header {
-    background-color: #1976d2; /* Blue header */
-    padding: 10px 20px;
-}
+        .btn-switch:hover {
+            background-color: #42a5f5; /* Light blue on hover */
+        }
 
+        /* Header styling */
+        header {
+            background-color: #1976d2; /* Blue header */
+            padding: 10px 20px;
+        }
     </style>
 </head>
 <body>
@@ -229,7 +239,6 @@ header {
                             <td>0</td>
                             <td>1</td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
