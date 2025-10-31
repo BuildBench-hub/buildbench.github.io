@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #5fbd6e, #80e27e); /* 绿色渐变背景 */
+    background: linear-gradient(to right, #6fa3d9, #7bb8e6); /* 蓝色渐变背景 */
     color: #333;
     text-align: center;
     padding: 0;
@@ -15,9 +15,8 @@ body {
 }
 
 header {
-    background-color: #388e3c; /* Green header */
+    background-color: #1976d2; /* 蓝色头部背景 */
     padding: 10px 20px;
-        
 }
 
 nav ul {
@@ -39,7 +38,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #66bb6a; /* 浅绿色背景 */
+    background-color: #42a5f5; /* 浅蓝色背景 */
     color: #333; /* 深色文字 */
     border-radius: 5px;
 }
@@ -98,7 +97,7 @@ section {
 }
 
 .news-link {
-    color: #388e3c;
+    color: #1976d2;
     font-weight: bold;
     text-decoration: none;
 }
@@ -135,7 +134,7 @@ section {
 }
 
 .cta-button {
-    background-color: #388e3c; /* 绿色按钮 */
+    background-color: #1976d2; /* 蓝色按钮 */
     color: white;
     padding: 10px 30px;
     text-decoration: none;
@@ -145,11 +144,11 @@ section {
 }
 
 .cta-button:hover {
-    background-color: #66bb6a; /* 浅绿色按钮悬停效果 */
+    background-color: #42a5f5; /* 浅蓝色按钮悬停效果 */
 }
 
 footer {
-    background-color: #2e7d32; /* 深绿色背景 */
+    background-color: #1565c0; /* 深蓝色背景 */
     color: #fff;
     padding: 20px;
     margin-top: 40px;
