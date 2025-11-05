@@ -3,165 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard - Home</title>
+    <title>Build-bench</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <style>
-/* General styling for the page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9; /* Light grey background */
-}
-
-header {
-    background-color: #1976d2; /* Blue header */
-    padding: 10px 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-/* Main section styling */
-main {
-    max-width: 1450px;
-    margin: 20px auto;  /* Center the content with space on both sides */
-    padding: 0 20px;    /* Adds some padding around the content */
-}
-
-/* Styling for the sections */
-section {
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-}
-
-.intro h1 {
-    font-size: 2.5em;
-    color: #1976d2; /* Blue text */
-    text-align: center;
-}
-
-.news-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.news-item h3 {
-    color: #1976d2; /* Blue color for news item headers */
-}
-
-.news-item a {
-    color: #1976d2; /* Blue links */
-    text-decoration: none;
-}
-
-/* About Us Section */
-#about-section h2 {
-    color: #1976d2; /* Blue header for About section */
-}
-
-/* Call to Action Section */
-.cta {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.cta h3 {
-    font-size: 1.8em;
-    color: #1976d2; /* Blue text */
-}
-
-.cta .cta-button {
-    background-color: #1976d2; /* Blue button */
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    margin-top: 10px;
-}
-
-.cta .cta-button:hover {
-    background-color: #42a5f5; /* Light blue on hover */
-}
-
-/* Footer styling */
-footer {
-    background-color: #1565c0; /* Dark blue footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-}
-
-
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="leaderboard1.html">Leaderboard</a></li>
-            </ul>
-        </nav>
-    </header>
+<section class="hero">
+  <div class="hero-header">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+      <h1 class="title">Build-bench</h1>
+  </div>
+  <h2 class="subtitle">Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems</h2>
+    <div class="authors">
+        <p>
+            <span class="author-name">Chenyu Zhao, Shenglin Zhang, Zeshun Huang, Weilin Jin, Yongqian Sun, Dan Pei, <br/> Chaoyun Zhang, Qingwei Lin, Chetan Bansal, Saravan Rajmohan, Minghua Ma</span><br/><br/>
+            <span class="author-aff">NanKai University, Microsoft </span>
+        </p>
+    </div>
 
-    <main>
-        <!-- Introduction Section -->
-        <section class="intro">
-            <h1>Welcome to the Model Performance Leaderboard</h1>
-            <p>Your ultimate benchmark platform for evaluating AI models.</p>
-        </section>
+    <div class="buttons">
+        <a href="https://arxiv.org/abs/2511.00780v1" class="btn">📄 Paper</a>
+        <a href="https://github.com/zcyyc/Build-bench" class="btn">📦 Code</a>
+    </div>
+</section>
 
-        <!-- News Section -->
-        <section id="news-section">
-            <h2>Latest News</h2>
-            <div class="news-container">
-                <div class="news-item">
-                    <h3>We setup this site🔥</h3>
-                    <p>NKCS AIOps</p>
-                    <a href="#" class="news-link">Read more</a>
-                </div>
-            </div>
-        </section>
+<section class="content_a" id="results">
+  <p class="abstract">
+    We present Build-bench, an end-to-end benchmark that systematically evaluates the capability of LLMs to repair build failures in cross-ISA settings.
+  </p>
+  <!-- <h2>Experimental Results</h2> -->
+   <div class="figure">
+    <img src="assets/fig1.png" class="figure-img" />
+    <p class="caption"><strong>Fig. 1.</strong> Comparison of different large language models (LLMs) in cross-ISA build repair tasks. (a) shows the success rates (%) achieved on four migration scenarios (x86_64→aarch64 (F), x86_64→aarch64 (P), aarch64→x86_64 (F), and aarch64→x86_64 (P)),
+where F denotes Full File Generation and P denotes Patch Generation. (b) summarizes the overall success rates across all tasks for each model.
+</p>
+  </div>
+</section>
 
-        <!-- About Us Section -->
-        <section id="about-section">
-            <h2>About Us</h2>
-            <p>We are a collaborative team from Nankai University and Microsoft, specializing in AIOps (Artificial Intelligence for IT Operations). Our mission is to improve the efficiency and automation of IT operations using cutting-edge technologies. We are dedicated to developing intelligent solutions for system monitoring, fault detection, and root cause analysis, enabling organizations to achieve seamless, proactive management of their IT infrastructure.</p>
-            <p>Feel free to explore our website to see the results and contribute to our open source repositories!</p>
-        </section>
+<section class="content">
+  <p>
+    Large language models (LLMs) have shown growing potential in software engineering, yet few benchmarks evaluate their ability to repair software during migration across instruction set architectures (ISAs). 
+    Cross-ISA migration, such as between <strong>x86_64 and aarch64</strong>, requires handling complex dependencies, heterogeneous toolchains, and long build logs while ensuring executable verification. 
+  </p>
+  <p>
+    To address this challenge, we present <span class="highlight">Build-bench</span>, an end-to-end benchmark that systematically evaluates the capability of LLMs to repair build failures in cross-ISA settings. 
+    Build-bench collects <strong>268</strong> real-world failed packages and integrates auxiliary tools including Structure Extraction, File Content Extraction, Content Modification, and Build Verification to support autonomous, tool-augmented reasoning. 
+    The repair process operates in an iterative loop where, upon failure, the model receives updated build logs and previous repair outcomes to refine subsequent attempts. 
+  </p>
+  <p>
+    Through a comparative evaluation of <strong>six representative LLMs</strong>, Build-bench reveals that current models achieve a maximum build success rate of <strong>63%</strong> and tool usage patterns differ significantly across models. 
+    By coupling real build environments with verifiable outcomes, Build-bench establishes the first architecture-aware benchmark for studying LLM-based software build and repair.
+  </p>
+</section>
 
-        <!-- Call to Action Section -->
-        <section class="cta">
-            <h3>Explore More</h3>
-            <p>Want to learn more about our work or contribute? Check out our papers and open source repositories!</p>
-            <a href="papers.html" class="cta-button">Papers & Repos</a>
-        </section>
-    </main>
+<section class="content" id="workflow">
+  <h2>System Workflow</h2>
+  <p>
+    The overall workflow of Build-bench, illustrated in Fig. 2, consists of three major stages: (1) Input & Diagnosis Context, (2) LLM-driven Repair Process, and (3) Verification & Evaluation.  </p>
+</section>
 
-    <footer style="position: fixed; bottom: 0; width: 100%; background-color: #1565c0; color: white; text-align: center; padding: 10px;">
-        <p>&copy; 2025 Model Performance Benchmark. All rights reserved.</p>
-    </footer>
+<section class="content_a">
+  <div class="figure">
+    <img src="assets/framework.png" class="figure-framework" />
+    <p class="caption"><strong>Fig. 2.</strong> The automatic cross-ISA repair and build pipeline of Build-bench. 
+      If the build fails and the maximum iteration 𝑁_max = 3 is not reached, the process repeats with the updated build log as well as the previous repair content.
+    </p>
+    
+  </div>
+</section>
 
-    <script src="assets/scripts.js"></script>
+
+<section class="content" id="workflow">
+<ul class="workflow-list">
+  <li>
+    <strong>Stage 1:</strong>  
+    Build-bench collects essential contextual artifacts from each failed package directory to support diagnosis and repair.
+  </li>
+
+  <li>
+    <strong>Stage 2:</strong>  
+    The second stage leverages an LLM-driven repair module based on the <span class="highlight">Model Context Protocol (MCP)</span>, which allows dynamic interaction between the model and a suite of external tools for information extraction and content modification.
+To assess how different editing granularities affect model performance, the repair process produces two experimental variants evaluated in Section 4.5: Full File Generation, where the model regenerates the entire faulty file while preserving its structure and minimal edits, and Patch Generation, where explicit line-level modifications are output in a diff-like
+format automatically applied on the relevant file by Build-bench.
+  </li>
+
+  <li>
+    <strong>Stage 3:</strong>  
+    The updated package is rebuilt on the Open Build Service (OBS) to verify whether the repair succeeds. If the rebuild fails and the maximum iteration threshold is not reached, the process repeats with the updated inputs. 
+    This iterative workflow enables reproducible, end-to-end evaluation of LLM-based repair performance across heterogeneous ISAs.
+  </li>
+</ul>
+
+</section>
+
+
+<section class="content" id="workflow">
+  <h2>Cross-ISA Build Tasks</h2>
+  <p>
+    As shown in Table 1, we evaluate both the effectiveness and efficiency of model-driven repair. The following metrics are adopted in Build-bench:
+  </p>
+  <ul class="workflow-list">
+      <li>
+        Build Success Rate: the percentage of packages that are successfully built on the target architecture within N_max iterations.
+      </li>
+      <li>
+        Average Repair Time (min): the average time a package takes until successful build or termination.
+      </li>
+      <li>
+        Average Token Consumption (K): the average number of input and output tokens the model consumes for each package during the entire repair process.
+      </li>
+    </ul>
+  <p>
+  This formulation provides a clear and measurable framework for assessing whether LLMs can understand, adapt, and repair software packages in cross-ISA migration scenarios, emphasizing their reasoning depth, contextual utilization, and cost-effectiveness.
+  </p>
+    
+</section>
+
+<section class="content_a">
+  
+  <div class="figure">
+    <p class="caption"><strong>Table. 1.</strong> Performance of LLMs on cross-ISA build failures in both migration directions. 
+      For each model, Success indicates the number of packages that are successfully built; Success Rate corresponds to Build Success Rate; Avg Time (min) corresponds to Average Repair Time; Avg Tokens (K) corresponds to Average Token Consumption.
+    </p>
+    <img src="assets/table2.png" class="figure-framework" />
+    
+  </div>
+</section>
+
+<section class="content">
+  <p>
+    Overall, the results reveal a trade-off between reasoning depth and efficiency. Models that maintain longer reasoning chains and richer tool interactions tend to achieve higher success rates but consume more time and tokens.
+    Conversely, faster models often exhibit insufficient context retention or under-exploration of repair strategies.
+  <p>
+    Table.2 summarizes the effect of iterative feedback on cumulative repair success across three iterations in Build-bench. 
+    Each iteration reuses the latest build log and prior repair output as contextual feedback, allowing the model to refine its reasoning and avoid repeating ineffective edits. 
+    Across both migration directions, iterative feedback consistently improves repair outcomes, confirming that LLMs benefit from exposure to updated diagnostic information.
+  </p>
+</section>
+
+<section class="content_a">
+  <div class="figure">
+    <p class="caption"><strong>Table.2 </strong> Iteration-wise improvement in build success rate on Build-bench. Iter-1, Iter-2, and Iter-3 denote the cumulative build success rates after the first, second, and third iterations, respectively. Δ(3–1) represents the improvement between the first and third iterations.
+    </p>
+    <img src="assets/table3.png" class="figure-framework" />
+    
+  </div>
+</section>
+
+<section class="content" id="workflow">
+  <h2>Tool Invocation Behavior Across LLMs</h2>
+  <p>
+    To further understand the behavioral characteristics of different models during cross-ISA repair, we analyze their tool invocation patterns. 
+    The bars indicate the total number of invocations for each tool across all 268 packages (including both migration directions), while the gray line represents the average number of tool calls per iteration, averaged over all repair attempts of each package.
+    These findings reveal that LLMs differ not only in their linguistic reasoning capabilities but also in their operational strategies during tool-assisted repair, which is an important factor contributing to their divergent success rates in cross-ISA build repair.
+  </p>
+</section>
+
+<section class="content_a">
+  <div class="figure">
+    <img src="assets/tool_usage.png" class="figure-framework" />
+    <p class="caption"><strong>Fig. 3. </strong> Comparison of tool invocation behavior across LLMs. The bars represent the total number of invocations for each tool per LLM, while the gray line indicates the average number of tool calls per iteration
+    </p>
+  </div>
+</section>
+
+
+<section class="content" id="citation">
+  <h2>BibTeX citation</h2>
+
+  <pre class="bibtex">
+@misc{zhao2025languagemodelscodingassessing,
+      title={Can Language Models Go Beyond Coding? Assessing the Capability of Language Models to Build Real-World Systems}, 
+      author={Chenyu Zhao and Shenglin Zhang and Zeshun Huang and Weilin Jin and Yongqian Sun and Dan Pei and Chaoyun Zhang and Qingwei Lin and Chetan Bansal and Saravan Rajmohan and Minghua Ma},
+      year={2025},
+      eprint={2511.00780},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2511.00780}, 
+}
+  </pre>
+</section>
+
+
+<footer class="footer">
+ © 2025 Build-bench
+</footer>
 </body>
 </html>
