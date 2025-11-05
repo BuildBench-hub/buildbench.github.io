@@ -1,159 +1,233 @@
-/* General Reset */
+/* ========== Global Reset ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #6fa3d9, #7bb8e6); /* 蓝色渐变背景 */
-    color: #333;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;          /* 默认内容字体大小 */
+  line-height: 1.8;         /* 行距舒适 */
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  text-align: center;
 }
 
-header {
-    background-color: #1976d2; /* 蓝色头部背景 */
-    padding: 10px 20px;
+/* ========== Hero Section ========== */
+.hero {
+  padding: 50px 20px 60px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-nav ul li a:hover {
-    background-color: #42a5f5; /* 浅蓝色背景 */
-    color: #333; /* 深色文字 */
-    border-radius: 5px;
+/* ========== Authors Section ========== */
+.authors {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
-main {
-    padding: 40px 20px;
+.author-name {
+  color: #222; /* 微软蓝 */
+  font-weight: 400;
 }
 
-/* 统一白色背景卡片式设计 */
-section {
-    background-color: #fff;
-    padding: 40px;
-    margin-top: 40px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.author-aff {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 10px;   /* 内容离边界10px，内部留白 */
+  margin: 15px 0; /* 与上下元素之间留出15px 空白 */
 }
 
-/* Intro Section */
-.intro h1 {
-    font-size: 2.5rem;
-    color: #333;
+
+/* ========== Buttons ========== */
+.buttons {
+  margin-bottom: -10px;
 }
 
-.intro p {
-    font-size: 1.2rem;
-    color: #666;
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 22px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-/* News Section */
-#news-section {
-    margin-top: 40px;
+.btn:hover {
+  background: #555;
 }
 
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+/* ========== Content Sections ========== */
+
+.content {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0px 20px;
+  text-align: left;
 }
 
-.news-item {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.content h2 {
+  text-align: center;
+  padding: 0px 60px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.news-item h3 {
-    font-size: 1.5rem;
-    color: #333;
+.content p {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #222;
 }
 
-.news-item p {
-    font-size: 1rem;
-    color: #666;
-    margin: 10px 0;
+.workflow-list {
+  margin-left: 30px;
 }
 
-.news-link {
-    color: #1976d2;
-    font-weight: bold;
-    text-decoration: none;
+.content li {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #222;
 }
 
-.news-link:hover {
-    text-decoration: underline;
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0px 0px;
+  color: #222;
 }
 
-/* About Section */
-#about-section {
-    background-color: #f9f9f9;
+.content_a {
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #222;
 }
 
-#about-section p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
+/* ========== SVG Diagram Container ========== */
+.svg-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  overflow-x: auto;
 }
 
-/* Call to Action Section */
-.cta {
-    margin-top: 40px;
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
-.cta h3 {
-    font-size: 2rem;
-    color: #333;
+/* ========== Footer ========== */
+.footer {
+  margin-top: 60px;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  color: #666;
+  background: #f8f8f8;
+  border-top: 1px solid #eaeaea;
 }
 
-.cta p {
-    font-size: 1.2rem;
-    color: #666;
-    margin: 20px 0;
+.figure-img {
+  display: block;
+  margin: 50px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0);
 }
 
-.cta-button {
-    background-color: #1976d2; /* 蓝色按钮 */
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.figure-framework {
+  display: block;
+  margin: 10px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0);
 }
 
-.cta-button:hover {
-    background-color: #42a5f5; /* 浅蓝色按钮悬停效果 */
+.highlight {
+  color: #0078d7;    /* 微软蓝 / 科技感蓝色 */
+  font-weight: 500;  /* 加粗，更醒目 */
 }
 
-footer {
-    background-color: #1565c0; /* 深蓝色背景 */
-    color: #fff;
-    padding: 20px;
-    margin-top: 40px;
+/* ===== BibTeX 样式 ===== */
+#citation h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-footer p {
-    font-size: 1rem;
+pre.bibtex {
+  background: #f5f5f5;        /* 淡灰背景 */
+  padding: 20px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace; /* 等宽字体 */
+  font-size: 1.0rem;
+  line-height: 1.4;
+  overflow-x: auto;           /* 超出时横向滚动 */
+  white-space: pre;           /* 保留空格与换行 */
+  border: 1px solid #e0e0e0;
+}
+
+/* 将 logo 与标题放在同一行并水平居中 */
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* ✅ 中间对齐 */
+  gap: 15px;                /* ✅ logo 和文字的间距 */
+  margin-bottom: 10px;
+}
+
+/* logo 大小可调 */
+.hero-header .logo {
+  width: 70px;        /* 可以改为你喜欢的：50px / 80px / 100px */
+  height: auto;
+}
+
+/* 标题样式 */
+.hero-header .title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* 副标题仍然居中 */
+.hero .subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
