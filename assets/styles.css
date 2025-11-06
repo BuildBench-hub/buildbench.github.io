@@ -182,6 +182,11 @@ svg {
   font-weight: 500;  /* 加粗，更醒目 */
 }
 
+.highlight_b {
+  color: #222;    /* 微软蓝 / 科技感蓝色 */
+  font-weight: 600;  /* 加粗，更醒目 */
+}
+
 /* ===== BibTeX 样式 ===== */
 #citation h2 {
   font-size: 1.8rem;
