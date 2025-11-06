@@ -42,15 +42,15 @@ where F denotes Full File Generation and P denotes Patch Generation. (b) summari
 <section class="content">
   <p>
     Large language models (LLMs) have shown growing potential in software engineering, yet few benchmarks evaluate their ability to repair software during migration across instruction set architectures (ISAs). 
-    Cross-ISA migration, such as between <strong>x86_64 and aarch64</strong>, requires handling complex dependencies, heterogeneous toolchains, and long build logs while ensuring executable verification. 
+    Cross-ISA migration, such as between <span class="highlight_b">x86_64 and aarch64</span>, requires handling complex dependencies, heterogeneous toolchains, and long build logs while ensuring executable verification. 
   </p>
   <p>
     To address this challenge, we present <span class="highlight">Build-bench</span>, an end-to-end benchmark that systematically evaluates the capability of LLMs to repair build failures in cross-ISA settings. 
-    Build-bench collects <strong>268</strong> real-world failed packages and integrates auxiliary tools including Structure Extraction, File Content Extraction, Content Modification, and Build Verification to support autonomous, tool-augmented reasoning. 
+    Build-bench collects <span class="highlight_b">268</span> real-world failed packages and integrates auxiliary tools including Structure Extraction, File Content Extraction, Content Modification, and Build Verification to support autonomous, tool-augmented reasoning. 
     The repair process operates in an iterative loop where, upon failure, the model receives updated build logs and previous repair outcomes to refine subsequent attempts. 
   </p>
   <p>
-    Through a comparative evaluation of <strong>six representative LLMs</strong>, Build-bench reveals that current models achieve a maximum build success rate of <strong>63%</strong> and tool usage patterns differ significantly across models. 
+    Through a comparative evaluation of <span class="highlight_b">six representative LLMs</span>, Build-bench reveals that current models achieve a maximum build success rate of <span class="highlight_b">63%</span> and tool usage patterns differ significantly across models. 
     By coupling real build environments with verifiable outcomes, Build-bench establishes the first architecture-aware benchmark for studying LLM-based software build and repair.
   </p>
 </section>
@@ -82,8 +82,9 @@ where F denotes Full File Generation and P denotes Patch Generation. (b) summari
   <li>
     <strong>Stage 2:</strong>  
     The second stage leverages an LLM-driven repair module based on the <span class="highlight">Model Context Protocol (MCP)</span>, which allows dynamic interaction between the model and a suite of external tools for information extraction and content modification.
-To assess how different editing granularities affect model performance, the repair process produces two experimental variants evaluated in Section 4.5: Full File Generation, where the model regenerates the entire faulty file while preserving its structure and minimal edits, and Patch Generation, where explicit line-level modifications are output in a diff-like
-format automatically applied on the relevant file by Build-bench.
+To assess how different editing granularities affect model performance, the repair process produces two experimental variants: 
+  </br> (1) <span class="highlight_b">Full File Generation</span>, where the model regenerates the entire faulty file while preserving its structure and minimal edits, and 
+</br>(2) <span class="highlight_b">Patch Generation</span>, where explicit line-level modifications are output in a diff-like format automatically applied on the relevant file by Build-bench.
   </li>
 
   <li>
@@ -103,13 +104,13 @@ format automatically applied on the relevant file by Build-bench.
   </p>
   <ul class="workflow-list">
       <li>
-        Build Success Rate: the percentage of packages that are successfully built on the target architecture within N_max iterations.
+        <span class="highlight_b">Build Success Rate</span>: the percentage of packages that are successfully built on the target architecture within N_max iterations.
       </li>
       <li>
-        Average Repair Time (min): the average time a package takes until successful build or termination.
+        <span class="highlight_b">Average Repair Time (min)</span>: the average time a package takes until successful build or termination.
       </li>
       <li>
-        Average Token Consumption (K): the average number of input and output tokens the model consumes for each package during the entire repair process.
+        <span class="highlight_b">Average Token Consumption (K)</span>: the average number of input and output tokens the model consumes for each package during the entire repair process.
       </li>
     </ul>
   <p>
